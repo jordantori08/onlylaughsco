@@ -1,191 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnlyLaughs - Stand-Up Comedy</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only Laughs - Stand-Up Comedy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Side Navigation Bar -->
-    <div class="sidenav">
-        <h2>OnlyLaughs</h2>
-        <a href="#" class="active">Home</a>
-        <a href="#comedy">Comedy Shows</a>
-        <a href="#search">Search</a>
-    </div>
+  <!-- Side Navigation Bar -->
+  <div class="sidenav" id="mySidenav">
+    <h2>Only Laughs</h2>
+    <a href="#old-school">Old School</a>
+    <a href="#up-and-coming">Up & Coming</a>
+    <a href="#weekly-top-picks">Weekly Top Picks</a>
+    <a href="#new-releases">New Releases</a>
+    <a href="#search">Search</a>
+  </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Search Bar -->
-        <div class="search-container" id="search">
-            <input type="text" id="searchInput" placeholder="Search for comedy shows..." onkeyup="searchVideos()">
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Welcome to Only Laughs</h1>
+    <div id="old-school">
+      <h2>Old School Comedians</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic1.jpg" alt="Comic 1" class="thumbnail">
+          <p>Comic 1 - Legendary Stand-Up</p>
         </div>
-
-        <!-- Video Thumbnails -->
-        <section id="comedy" class="video-container">
-            <div class="video-card" data-title="Comedy Show 1">
-                <img src="thumb1.jpg" alt="Comedy Show 1" class="video-thumbnail">
-                <div class="video-info">
-                    <h3>Comedy Show 1</h3>
-                    <p>Stand-up comedy special from comedian 1.</p>
-                </div>
-            </div>
-
-            <div class="video-card" data-title="Comedy Show 2">
-                <img src="thumb2.jpg" alt="Comedy Show 2" class="video-thumbnail">
-                <div class="video-info">
-                    <h3>Comedy Show 2</h3>
-                    <p>A hilarious set by comedian 2, covering family life.</p>
-                </div>
-            </div>
-
-            <div class="video-card" data-title="Comedy Show 3">
-                <img src="thumb3.jpg" alt="Comedy Show 3" class="video-thumbnail">
-                <div class="video-info">
-                    <h3>Comedy Show 3</h3>
-                    <p>Comedian 3 shares stories about life on the road.</p>
-                </div>
-            </div>
-
-            <div class="video-card" data-title="Comedy Show 4">
-                <img src="thumb4.jpg" alt="Comedy Show 4" class="video-thumbnail">
-                <div class="video-info">
-                    <h3>Comedy Show 4</h3>
-                    <p>Stand-up special from comedian 4 featuring political humor.</p>
-                </div>
-            </div>
-
-            <!-- Add more video cards as needed -->
-        </section>
+        <!-- Add more video items -->
+      </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 OnlyLaughs.co</p>
-    </footer>
+    <div id="up-and-coming">
+      <h2>Up & Coming Comedians</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic2.jpg" alt="Comic 2" class="thumbnail">
+          <p>Comic 2 - Rising Star</p>
+        </div>
+        <!-- Add more video items -->
+      </div>
+    </div>
 
-    <script src="script.js"></script>
+    <div id="weekly-top-picks">
+      <h2>Weekly Top Picks</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic3.jpg" alt="Comic 3" class="thumbnail">
+          <p>Comic 3 - Top of the Week</p>
+        </div>
+        <!-- Add more video items -->
+      </div>
+    </div>
+
+    <div id="new-releases">
+      <h2>New Releases</h2>
+      <div class="video-gallery">
+        <div class="video-item">
+          <img src="comedians/comic4.jpg" alt="Comic 4" class="thumbnail">
+          <p>Comic 4 - Latest Special</p>
+        </div>
+        <!-- Add more video items -->
+      </div>
+    </div>
+
+    <div id="search">
+      <h2>Search for Comedians</h2>
+      <input type="text" id="search-input" placeholder="Search comedian...">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-/* Global Styles */
+/* General Body and Layout */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100vh;
-    background-color: #141414;
-    color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #121212;  /* Dark background for contrast */
 }
 
+h1, h2 {
+  color: #ffca28; /* Yellowish Gold for titles */
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+/* Side Navigation Bar */
 .sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #222;
-    padding-top: 20px;
-    color: white;
-    text-align: center;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1f1f1f;
+  padding-top: 20px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .sidenav h2 {
-    font-size: 2em;
-    color: #ff4b2b;
+  text-align: center;
+  color: #ffca28;
+  margin-bottom: 20px;
 }
 
 .sidenav a {
-    padding: 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-    border-bottom: 1px solid #444;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: background-color 0.3s ease;
 }
 
-.sidenav a:hover, .sidenav .active {
-    background-color: #ff4b2b;
+.sidenav a:hover {
+  background-color: #ffca28;
+  color: #1f1f1f;
 }
 
-.main-content {
-    margin-left: 250px;
-    padding: 20px;
-    flex-grow: 1;
+/* Main Content */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  color: white;
+  width: 100%;
 }
 
-.search-container {
-    margin-bottom: 30px;
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-#searchInput {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.1em;
-    border: 2px solid #555;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
-    margin-bottom: 20px;
+.video-item {
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 180px;
 }
 
-.video-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+.video-item img {
+  width: 100%;
+  height: auto;
 }
 
-.video-card {
-    width: 220px;
-    background: #333;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.3s ease;
+.thumbnail {
+  border-radius: 8px;
 }
 
-.video-card:hover {
-    transform: scale(1.05);
+.video-item p {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
 }
 
-.video-thumbnail {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-bottom: 3px solid #ff4b2b;
+/* Search Section */
+#search {
+  margin-top: 40px;
 }
 
-.video-info {
-    padding: 10px;
+#search input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
 }
 
-h3 {
-    font-size: 1.3em;
-    margin: 10px 0;
+/* Page Breaks */
+@media print {
+  .video-gallery {
+    page-break-before: always;
+  }
 }
+document.getElementById('search-input').addEventListener('input', function() {
+  let searchTerm = this.value.toLowerCase();
+  let videos = document.querySelectorAll('.video-item p');
 
-footer {
-    text-align: center;
-    color: #999;
-    padding: 20px 0;
-    background-color: #222;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-// Search functionality to filter videos based on title
-function searchVideos() {
-    const query = document.getElementById('searchInput').value.toLowerCase();
-    const videoCards = document.querySelectorAll('.video-card');
-    
-    videoCards.forEach(card => {
-        const title = card.getAttribute('data-title').toLowerCase();
-        if (title.includes(query)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
+  videos.forEach(function(video) {
+    let text = video.innerText.toLowerCase();
+    if (text.includes(searchTerm)) {
+      video.parentElement.style.display = 'block';
+    } else {
+      video.parentElement.style.display = 'none';
+    }
+  });
+});
